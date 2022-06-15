@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gqh-O5-NgJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Paint View Controller-->
+        <scene sceneID="aI8-G2-8dT">
+            <objects>
+                <viewController storyboardIdentifier="PaintView" id="gqh-O5-NgJ" customClass="PaintViewController" customModule="paint_it" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="faM-aG-fy6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hu6-zX-nxE">
+                                <rect key="frame" x="0.0" y="60" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="YwT-0B-h2m"/>
+                                </constraints>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLt-UK-ChG" customClass="DrawPanel" customModule="paint_it" customModuleProvider="target">
+                                <rect key="frame" x="16" y="176" width="382" height="670"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mx9-LK-XsG"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="mx9-LK-XsG" firstAttribute="bottom" secondItem="bLt-UK-ChG" secondAttribute="bottom" constant="16" id="0yd-KE-zp7"/>
+                            <constraint firstItem="mx9-LK-XsG" firstAttribute="trailing" secondItem="bLt-UK-ChG" secondAttribute="trailing" constant="16" id="2bv-ig-QpC"/>
+                            <constraint firstItem="hu6-zX-nxE" firstAttribute="top" secondItem="mx9-LK-XsG" secondAttribute="top" constant="16" id="Eui-GF-XcX"/>
+                            <constraint firstItem="hu6-zX-nxE" firstAttribute="leading" secondItem="mx9-LK-XsG" secondAttribute="leading" id="TLW-LB-x4r"/>
+                            <constraint firstItem="bLt-UK-ChG" firstAttribute="leading" secondItem="mx9-LK-XsG" secondAttribute="leading" constant="16" id="aE3-kf-22u"/>
+                            <constraint firstItem="hu6-zX-nxE" firstAttribute="trailing" secondItem="mx9-LK-XsG" secondAttribute="trailing" id="pYC-DF-vLv"/>
+                            <constraint firstItem="bLt-UK-ChG" firstAttribute="top" secondItem="hu6-zX-nxE" secondAttribute="bottom" constant="16" id="q5R-3x-30Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawPanel" destination="bLt-UK-ChG" id="UJf-fw-ANP"/>
+                        <outlet property="pickerView" destination="hu6-zX-nxE" id="46D-Pp-kVD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iis-d9-hfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176" y="-313"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
